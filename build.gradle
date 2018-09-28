@@ -1,0 +1,31 @@
+subprojects {
+
+    buildscript {
+        ext {
+            springBootVersion = '2.0.5.RELEASE'
+        }
+        repositories {
+            mavenCentral()
+        }
+        dependencies {
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        }
+    }
+
+
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    sourceCompatibility = 1.8
+
+
+    ext {
+        springCloudVersion = 'Finchley.SR1'
+    }
+
+
+
+}
