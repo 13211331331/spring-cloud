@@ -3,3 +3,6 @@ rootProject.name = 'spring-cloud'
 include '02/server'
 rootProject.children.find { it.name == '02/server' }.name = 'server'
 
+include '02/provider'
+rootProject.children.find { it.name == '02/provider' }.name = 'provider'
+
