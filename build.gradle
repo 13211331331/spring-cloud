@@ -12,15 +12,14 @@ subprojects {
         }
     }
 
-
     repositories {
         mavenCentral()
     }
 
     apply plugin: 'java'
     apply plugin: 'eclipse'
-    sourceCompatibility = 1.8
 
+    sourceCompatibility = 1.8
 
     ext {
         springCloudVersion = 'Finchley.SR1'
