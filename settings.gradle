@@ -1,0 +1,5 @@
+rootProject.name = 'spring-cloud'
+
+include '02/server'
+rootProject.children.find { it.name == '02/server' }.name = 'server'
+
