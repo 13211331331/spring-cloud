@@ -1,6 +1,7 @@
 rootProject.name = 'spring-cloud'
 
 include '02:server', '02:provider', '02:consumer'
+
 include '04/server'
 rootProject.children.find { it.name == '04/server' }.name = 'server04'
 
@@ -9,4 +10,47 @@ rootProject.children.find { it.name == '04/provider' }.name = 'provider04'
 
 include '04/consumer'
 rootProject.children.find { it.name == '04/consumer' }.name = 'consumer04'
+
+
+
+
+include '05/provider'
+rootProject.children.find { it.name == '05/provider' }.name = 'provider05'
+
+include '05/consumer'
+rootProject.children.find { it.name == '05/consumer' }.name = 'consumer05'
+
+include '05/server'
+rootProject.children.find { it.name == '05/server' }.name = 'server05'
+
+include '05/server01'
+rootProject.children.find { it.name == '05/server01' }.name = 'server0501'
+
+include '05/server02'
+rootProject.children.find { it.name == '05/server02' }.name = 'server0502'
+
+include '05/server03'
+rootProject.children.find { it.name == '05/server03' }.name = 'server0503'
+
+
+
+
+
+include '06/provider'
+rootProject.children.find { it.name == '06/provider' }.name = 'provider06'
+
+include '06/consumer'
+rootProject.children.find { it.name == '06/consumer' }.name = 'consumer06'
+
+include '06/server'
+rootProject.children.find { it.name == '06/server' }.name = 'server06'
+
+include '06/provider01'
+rootProject.children.find { it.name == '06/provider01' }.name = 'provider0601'
+
+include '06/provider02'
+rootProject.children.find { it.name == '06/provider02' }.name = 'provider0602'
+
+include '06/provider03'
+rootProject.children.find { it.name == '06/provider03' }.name = 'provider0603'
 
