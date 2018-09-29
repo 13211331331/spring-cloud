@@ -88,6 +88,8 @@ rootProject.children.find { it.name == '09/provider01' }.name = 'provider0901'
 include '09/provider02'
 rootProject.children.find { it.name == '09/provider02' }.name = 'provider0902'
 
+
+
 include '10/server'
 rootProject.children.find { it.name == '10/server' }.name = 'server10'
 
@@ -100,3 +102,37 @@ rootProject.children.find { it.name == '10/provider01' }.name = 'provider1001'
 include '10/provider02'
 rootProject.children.find { it.name == '10/provider02' }.name = 'provider1002'
 
+
+
+
+include '11/api'
+rootProject.children.find { it.name == '11/api' }.name = 'api11'
+
+include '11/bean'
+rootProject.children.find { it.name == '11/bean' }.name = 'bean11'
+
+include '11/server'
+rootProject.children.find { it.name == '11/server' }.name = 'server11'
+
+include '11/consumer'
+rootProject.children.find { it.name == '11/consumer' }.name = 'consumer11'
+
+include '11/provider'
+rootProject.children.find { it.name == '11/provider' }.name = 'provider11'
+
+
+
+include '12/api'
+rootProject.children.find { it.name == '12/api' }.name = 'api12'
+
+include '12/bean'
+rootProject.children.find { it.name == '12/bean' }.name = 'bean12'
+
+include '12/server'
+rootProject.children.find { it.name == '12/server' }.name = 'server12'
+
+include '12/consumer'
+rootProject.children.find { it.name == '12/consumer' }.name = 'consumer12'
+
+include '12/provider'
+rootProject.children.find { it.name == '12/provider' }.name = 'provider12'
