@@ -136,3 +136,178 @@ rootProject.children.find { it.name == '12/consumer' }.name = 'consumer12'
 
 include '12/provider'
 rootProject.children.find { it.name == '12/provider' }.name = 'provider12'
+
+
+
+
+include '13/api'
+rootProject.children.find { it.name == '13/api' }.name = 'api13'
+
+include '13/bean'
+rootProject.children.find { it.name == '13/bean' }.name = 'bean13'
+
+include '13/consumer'
+rootProject.children.find { it.name == '13/consumer' }.name = 'consumer13'
+
+include '13/provider'
+rootProject.children.find { it.name == '13/provider' }.name = 'provider13'
+
+include '13/server'
+rootProject.children.find { it.name == '13/server' }.name = 'server13'
+
+
+
+
+include '14/api'
+rootProject.children.find { it.name == '14/api' }.name = 'api14'
+
+include '14/bean'
+rootProject.children.find { it.name == '14/bean' }.name = 'bean14'
+
+include '14/consumer'
+rootProject.children.find { it.name == '14/consumer' }.name = 'consumer14'
+
+include '14/provider'
+rootProject.children.find { it.name == '14/provider' }.name = 'provider14'
+
+include '14/server'
+rootProject.children.find { it.name == '14/server' }.name = 'server14'
+
+
+
+
+
+include '16/api'
+rootProject.children.find { it.name == '16/api' }.name = 'api16'
+
+include '16/bean'
+rootProject.children.find { it.name == '16/bean' }.name = 'bean16'
+
+include '16/consumer'
+rootProject.children.find { it.name == '16/consumer' }.name = 'consumer16'
+
+include '16/provider'
+rootProject.children.find { it.name == '16/provider' }.name = 'provider16'
+
+include '16/server'
+rootProject.children.find { it.name == '16/server' }.name = 'server16'
+
+
+
+
+
+
+include '17/api'
+rootProject.children.find { it.name == '17/api' }.name = 'api17'
+
+include '17/bean'
+rootProject.children.find { it.name == '17/bean' }.name = 'bean17'
+
+include '17/consumer'
+rootProject.children.find { it.name == '17/consumer' }.name = 'consumer17'
+
+include '17/provider'
+rootProject.children.find { it.name == '17/provider' }.name = 'provider17'
+
+include '17/server'
+rootProject.children.find { it.name == '17/server' }.name = 'server17'
+
+
+
+
+
+include '18/api'
+rootProject.children.find { it.name == '18/api' }.name = 'api18'
+
+include '18/bean'
+rootProject.children.find { it.name == '18/bean' }.name = 'bean18'
+
+include '18/consumer'
+rootProject.children.find { it.name == '18/consumer' }.name = 'consumer18'
+
+include '18/provider'
+rootProject.children.find { it.name == '18/provider' }.name = 'provider18'
+
+include '18/server'
+rootProject.children.find { it.name == '18/server' }.name = 'server18'
+
+
+
+
+include '19/api'
+rootProject.children.find { it.name == '19/api' }.name = 'api19'
+
+include '19/bean'
+rootProject.children.find { it.name == '19/bean' }.name = 'bean19'
+
+include '19/consumer'
+rootProject.children.find { it.name == '19/consumer' }.name = 'consumer19'
+
+include '19/provider'
+rootProject.children.find { it.name == '19/provider' }.name = 'provider19'
+
+include '19/server'
+rootProject.children.find { it.name == '19/server' }.name = 'server19'
+
+
+
+
+
+
+include '20/api'
+rootProject.children.find { it.name == '20/api' }.name = 'api20'
+
+include '20/bean'
+rootProject.children.find { it.name == '20/bean' }.name = 'bean20'
+
+include '20/consumer'
+rootProject.children.find { it.name == '20/consumer' }.name = 'consumer20'
+
+include '20/provider'
+rootProject.children.find { it.name == '20/provider' }.name = 'provider20'
+
+include '20/server'
+rootProject.children.find { it.name == '20/server' }.name = 'server20'
+
+
+
+
+
+
+
+
+include '22/api'
+rootProject.children.find { it.name == '22/api' }.name = 'api22'
+
+include '22/bean'
+rootProject.children.find { it.name == '22/bean' }.name = 'bean22'
+
+include '22/consumer'
+rootProject.children.find { it.name == '22/consumer' }.name = 'consumer22'
+
+include '22/provider'
+rootProject.children.find { it.name == '22/provider' }.name = 'provider22'
+
+include '22/server'
+rootProject.children.find { it.name == '22/server' }.name = 'server22'
+
+
+
+
+
+include '23/api'
+rootProject.children.find { it.name == '23/api' }.name = 'api23'
+
+
+include '23/bean'
+rootProject.children.find { it.name == '23/bean' }.name = 'bean23'
+
+include '23/consumer'
+rootProject.children.find { it.name == '23/consumer' }.name = 'consumer23'
+
+include '23/provider'
+rootProject.children.find { it.name == '23/provider' }.name = 'provider23'
+
+include '23/server'
+rootProject.children.find { it.name == '23/server' }.name = 'server23'
+
