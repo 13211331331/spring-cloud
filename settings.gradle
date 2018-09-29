@@ -54,3 +54,49 @@ rootProject.children.find { it.name == '06/provider02' }.name = 'provider0602'
 include '06/provider03'
 rootProject.children.find { it.name == '06/provider03' }.name = 'provider0603'
 
+
+
+include '08/consumer'
+rootProject.children.find { it.name == '08/consumer' }.name = 'consumer08'
+
+include '08/server'
+rootProject.children.find { it.name == '08/server' }.name = 'server08'
+
+include '08/provider01'
+rootProject.children.find { it.name == '08/provider01' }.name = 'provider0801'
+
+include '08/provider02'
+rootProject.children.find { it.name == '08/provider02' }.name = 'provider0802'
+
+include '08/provider0201'
+rootProject.children.find { it.name == '08/provider0201' }.name = 'provider080201'
+
+include '08/provider0202'
+rootProject.children.find { it.name == '08/provider0202' }.name = 'provider080202'
+
+
+
+include '09/server'
+rootProject.children.find { it.name == '09/server' }.name = 'server09'
+
+include '09/consumer'
+rootProject.children.find { it.name == '09/consumer' }.name = 'consumer09'
+
+include '09/provider01'
+rootProject.children.find { it.name == '09/provider01' }.name = 'provider0901'
+
+include '09/provider02'
+rootProject.children.find { it.name == '09/provider02' }.name = 'provider0902'
+
+include '10/server'
+rootProject.children.find { it.name == '10/server' }.name = 'server10'
+
+include '10/consumer'
+rootProject.children.find { it.name == '10/consumer' }.name = 'consumer10'
+
+include '10/provider01'
+rootProject.children.find { it.name == '10/provider01' }.name = 'provider1001'
+
+include '10/provider02'
+rootProject.children.find { it.name == '10/provider02' }.name = 'provider1002'
+
