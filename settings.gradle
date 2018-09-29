@@ -4,3 +4,6 @@ include '02:server', '02:provider', '02:consumer'
 include '04/server'
 rootProject.children.find { it.name == '04/server' }.name = 'server04'
 
+include '04/provider'
+rootProject.children.find { it.name == '04/provider' }.name = 'provider04'
+
