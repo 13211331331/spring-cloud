@@ -249,6 +249,9 @@ rootProject.children.find { it.name == '19/provider' }.name = 'provider19'
 include '19/server'
 rootProject.children.find { it.name == '19/server' }.name = 'server19'
 
+include '19/turbine'
+rootProject.children.find { it.name == '19/turbine' }.name = 'turbine19'
+
 
 
 
@@ -269,8 +272,11 @@ rootProject.children.find { it.name == '20/provider' }.name = 'provider20'
 include '20/server'
 rootProject.children.find { it.name == '20/server' }.name = 'server20'
 
+include '20/turbine'
+rootProject.children.find { it.name == '20/turbine' }.name = 'turbine20'
 
-
+include '20/gateway'
+rootProject.children.find { it.name == '20/gateway' }.name = 'gateway20'
 
 
 
@@ -291,6 +297,13 @@ rootProject.children.find { it.name == '22/provider' }.name = 'provider22'
 include '22/server'
 rootProject.children.find { it.name == '22/server' }.name = 'server22'
 
+include '22/turbine'
+rootProject.children.find { it.name == '22/turbine' }.name = 'turbine22'
+
+include '22/gateway'
+rootProject.children.find { it.name == '22/gateway' }.name = 'gateway22'
+
+
 
 
 
@@ -310,4 +323,10 @@ rootProject.children.find { it.name == '23/provider' }.name = 'provider23'
 
 include '23/server'
 rootProject.children.find { it.name == '23/server' }.name = 'server23'
+
+include '23/turbine'
+rootProject.children.find { it.name == '23/turbine' }.name = 'turbine23'
+
+include '23/gateway'
+rootProject.children.find { it.name == '23/gateway' }.name = 'gateway23'
 
