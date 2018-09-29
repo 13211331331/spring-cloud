@@ -7,3 +7,6 @@ rootProject.children.find { it.name == '04/server' }.name = 'server04'
 include '04/provider'
 rootProject.children.find { it.name == '04/provider' }.name = 'provider04'
 
+include '04/consumer'
+rootProject.children.find { it.name == '04/consumer' }.name = 'consumer04'
+
