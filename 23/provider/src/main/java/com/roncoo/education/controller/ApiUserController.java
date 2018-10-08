@@ -1,4 +1,4 @@
-application.propertiespackage com.roncoo.education.controller;
+package com.roncoo.education.controller;
 
 import java.io.File;
 import java.io.IOException;
