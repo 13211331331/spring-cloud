@@ -1,60 +1,24 @@
 
 
 2 简单的三个：eurekaServer、provider、consumer
+
 4 info自定义， 指定环境，指定数据中心，关闭自我保护模式，设置清理无效节点的时间间隔
+
 5 多个eurekaServer集群
+
 6.多个provider
+
 8 provider provider provider2
  在consumer通过不同url选择
     private static final String URL="http://spring-cloud-provider/api/user/{id}";
  	private static final String URL2="http://spring-cloud-provider2/api/user/{id}";
  	在provider找那中：spring.application.name=spring-cloud-provider   spring.application.name=spring-cloud-provider2
+
 9 在consumer 自定义策略 spring-cloud-provider.ribbon.NFLoadBalancerRuleClassName
-10
 
+10 在consumer ConsumerApplication中@EnableFeignClients
+  @FeignClient(value = "spring-cloud-provider")
+  interface IUserBiz
+  方法中加入@RequestMapping(value  和Controller类似
 
-
-
-使用技术
-（1）spring boot，使用版本：1.5.8
-（2）spring cloud ，使用版本：Dalston.SR4
-（3）Netflix Eureka
-（4）Netflix Ribbon
-（5）Feign
-（6）Netflix Hystrix
-（7）Spring Clou Config（Git/SVN/Local）
-（8）Netflix Zuul
-（9）Spring Cloud Bus
-
-
-课程大纲
-
-第1节Spring Cloud 概念 [免费观看] 00:09:22分钟   |
-第2节Spring Cloud服务提供者与服务消费者 [免费观看] 00:25:33分钟   |
-第3节Spring Cloud 服务发现与服务注册概念 [免费观看] 00:05:12分钟   |
-第4节Spring Cloud 服务发现组件Eureka实现00:16:30分钟   |
-第5节Spring Cloud 服务消费者（Ribbon）00:10:36分钟   |
-第6节Spring Cloud 服务消费者（Feign）00:10:40分钟   |
-第7节Spring Cloud 断路器(Ribbon)00:06:59分钟   |
-第8节Spring Cloud 断路器(Feign)00:03:03分钟   |
-第9节Spring Cloud 分布式配置中心（git）00:24:49分钟   |
-第10节Spring Cloud 分布式配置中心（svn）00:07:57分钟   |
-第11节Spring Cloud 分布式配置中心（Local）00:05:36分钟   |
-第12节Spring Cloud微服务获取配置00:13:30分钟   |
-第13节Spring Cloud 服务网关00:15:35分钟   |
-第14节Spring Cloud 服务网关-过滤器00:12:17分钟   |
-第15节Spring Cloud 消息总线00:07:05分钟   |
-第16节Spring Cloud消息总线-改进版00:06:40分钟   |
-第17节如何解决Eureka Server不踢出已关停的节点的问题00:06:07分钟   |
-第18节Eureka高可用00:08:25分钟   |
-第19节Ribbon使用配置文件自定义Ribbon Client（1）00:16:50分钟   |
-第20节Ribbon使用配置文件自定义Ribbon Client（2）00:08:56分钟   |
-第21节Ribbon脱离Eureka使用00:05:17分钟   |
-第22节覆写Feign的默认配置Configuration之Contract00:16:53分钟   |
-第23节Spring Cloud中关于Feign的常见问题总结00:07:54分钟   |
-第24节解决Spring Cloud中FeignRibbon第一次请求失败的方法00:05:15分钟   |
-第25节Feign添加 fallbackFactory 属性来触发请求进行容灾降级00:06:35分钟   |
-第26节断路器Hystrix总结00:03:49分钟   |
-第27节Health Indicator（健康指标） 和metrics stream（指标流）00:07:59分钟   |
-第28节断路器监控(Hystrix Dashboard)00:05:17分钟   |
-第29节断路器聚合监控(turbine)00:14:57分钟
+11

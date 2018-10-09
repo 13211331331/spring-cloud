@@ -2,7 +2,8 @@ subprojects {
 
     buildscript {
         ext {
-            springBootVersion = '2.0.5.RELEASE'
+            springBootVersion = '1.5.1.RELEASE'
+            //springBootVersion = '2.0.5.RELEASE'
         }
         repositories {
             mavenCentral()
@@ -23,7 +24,8 @@ subprojects {
     sourceCompatibility = 1.8
 
     ext {
-        springCloudVersion = 'Finchley.SR1'
+        //springCloudVersion = 'Finchley.SR1'
+        springCloudVersion = 'Edgware.SR4'
     }
 
 
