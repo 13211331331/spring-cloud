@@ -20,5 +20,6 @@
   @FeignClient(value = "spring-cloud-provider")
   interface IUserBiz
   方法中加入@RequestMapping(value  和Controller类似
+  原来：RestTemplate方式调用远程服务
 
 11
