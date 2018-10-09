@@ -1,8 +1,8 @@
 
 
-2 简单的EurekaServer、provider、consumer
-4 info自定义， 指定环境，指定数据中心，关闭自我保护模式，设置清理无效节点的时间间
-5 多个EurekaServer集群
+2 简单的三个：eurekaServer、provider、consumer
+4 info自定义， 指定环境，指定数据中心，关闭自我保护模式，设置清理无效节点的时间间隔
+5 多个eurekaServer集群
 6.多个provider
 8 provider provider provider2
  在consumer通过不同url选择
