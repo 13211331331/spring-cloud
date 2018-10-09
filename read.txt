@@ -10,7 +10,7 @@
  	private static final String URL2="http://spring-cloud-provider2/api/user/{id}";
  	在provider找那中：spring.application.name=spring-cloud-provider   spring.application.name=spring-cloud-provider2
 9 在consumer 自定义策略 spring-cloud-provider.ribbon.NFLoadBalancerRuleClassName
-
+10
 
 
 
