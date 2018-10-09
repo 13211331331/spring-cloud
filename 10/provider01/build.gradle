@@ -18,8 +18,6 @@ dependencyManagement {
 
 dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-config')
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-netflix-core', version: '1.4.5.RELEASE'
-    implementation('org.springframework.cloud:spring-cloud-starter-openfeign')
     compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
 }
 
