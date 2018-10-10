@@ -25,15 +25,27 @@
 11 将interface IUserBiz抽离出来到新的一个工程（api工程），将接口单独抽离出来，支持更多的接口
 
 12 将UserService放到bean，consumer，provider同时使用这个service（consumer通过api）
-    在consumer feign开启压缩等配置
+    在consumer feign开启压缩等配置,FeignClient启用RcFeignConfiguration
 
 13 和12无变化
 
 14 在consumer @EnableCircuitBreaker  @HystrixCommand(fallbackMethod = "getFallback")
 
-16 和14无变化
+16 在consumer @HystrixCommand(fallbackMethod = "getFallback", commandProperties = @HystrixProperty(name = HystrixPropertiesManager.EXECUTION_ISOLATION_STRATEGY, value = "SEMAPHORE"))
 
-17
+17 FeignClient的RcFeignConfiguration配置更加丰富，fallback配到FeignClient，自定义的fallback配置断路器（原来的是配到consumer的Controller层）
+
+
+
+
+
+
+
+
+
+
+
+
 
 坑：
 org.gradle.api.artifacts.ProjectDependency.getConfiguration()Ljava/lang/String;
