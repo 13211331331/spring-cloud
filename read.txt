@@ -23,3 +23,11 @@
   原来：RestTemplate方式调用远程服务
 
 11 将interface IUserBiz抽离出来到新的一个工程（api工程），将接口单独抽离出来，支持更多的接口
+
+12
+
+
+
+坑：
+org.gradle.api.artifacts.ProjectDependency.getConfiguration()Ljava/lang/String;
+升级 springBootVersion到1.5.2
