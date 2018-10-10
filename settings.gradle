@@ -216,7 +216,7 @@ rootProject.children.find { it.name == '17/provider' }.name = 'provider17'
 
 include '17/server'
 rootProject.children.find { it.name == '17/server' }.name = 'server17'
-*/
+
 
 
 
@@ -235,8 +235,8 @@ rootProject.children.find { it.name == '18/provider' }.name = 'provider18'
 
 include '18/server'
 rootProject.children.find { it.name == '18/server' }.name = 'server18'
+*/
 
-/*
 
 include '19/api'
 rootProject.children.find { it.name == '19/api' }.name = 'api19'
@@ -258,7 +258,7 @@ rootProject.children.find { it.name == '19/turbine' }.name = 'turbine19'
 
 
 
-
+/*
 
 
 include '20/api'
