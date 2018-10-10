@@ -29,9 +29,9 @@
 
 13 和12无变化
 
-14 和12无变化
+14 在consumer @EnableCircuitBreaker
 
-14
+16 和14无变化
 
 坑：
 org.gradle.api.artifacts.ProjectDependency.getConfiguration()Ljava/lang/String;
