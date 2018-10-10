@@ -1,6 +1,8 @@
 
 package com.roncoo.education.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import com.netflix.hystrix.contrib.javanica.conf.HystrixPropertiesManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,14 +22,19 @@ public class UserController {
 	// private static final String URL="http://localhost:7777/api/user/{id}";
 	private static final String URL = "http://spring-cloud-provider/api/user/{id}";
 	private static final String URL2 = "http://spring-cloud-provider2/api/user/{id}";
+    private Integer a = 0;
 
 	@Autowired
 	private RestTemplate restTemplate;
 
-	// @HystrixCommand(fallbackMethod = "getFallback", commandProperties = @HystrixProperty(name = HystrixPropertiesManager.EXECUTION_ISOLATION_STRATEGY, value = "SEMAPHORE"))
-	@HystrixCommand(fallbackMethod = "getFallback")
+	 @HystrixCommand(fallbackMethod = "getFallback", commandProperties = @HystrixProperty(name = HystrixPropertiesManager.EXECUTION_ISOLATION_STRATEGY, value = "SEMAPHORE"))
+	//@HystrixCommand(fallbackMethod = "getFallback")
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public String get(@PathVariable(value = "id") int id) {
+	public String get(@PathVariable(value = "id") int id) throws Exception {
+         a++;
+         if(a%2 == 0){
+             throw new Exception("error");
+         }
 		return restTemplate.getForObject(URL, String.class, id);
 	}
 
