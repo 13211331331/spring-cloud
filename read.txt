@@ -29,7 +29,7 @@
 
 13 和12无变化
 
-14 在consumer @EnableCircuitBreaker
+14 在consumer @EnableCircuitBreaker  @HystrixCommand(fallbackMethod = "getFallback")
 
 16 和14无变化
 

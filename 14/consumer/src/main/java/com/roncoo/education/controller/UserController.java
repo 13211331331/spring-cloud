@@ -23,10 +23,15 @@ public class UserController {
 
 	@Autowired
 	private RestTemplate restTemplate;
+    private Integer a = 0;
 
 	@HystrixCommand(fallbackMethod = "getFallback")
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public String get(@PathVariable(value = "id") int id) {
+	public String get(@PathVariable(value = "id") int id) throws Exception {
+        a++;
+        if(a%2 == 0){
+            throw new Exception("error");
+        }
 		return restTemplate.getForObject(URL, String.class, id);
 	}
 
