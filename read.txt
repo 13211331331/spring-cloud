@@ -35,7 +35,7 @@
 
 17 FeignClient的RcFeignConfiguration配置更加丰富，fallback配到FeignClient，自定义的fallback配置断路器（原来的是配到consumer的Controller层）
 
-18
+18 fallback配到FeignClient,断路器的一些配置，在EurekaServer中加上@EnableHystrixDashboard
 
 
 
