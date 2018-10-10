@@ -25,8 +25,13 @@
 11 将interface IUserBiz抽离出来到新的一个工程（api工程），将接口单独抽离出来，支持更多的接口
 
 12 将UserService放到bean，consumer，provider同时使用这个service（consumer通过api）
+    在consumer feign开启压缩等配置
 
+13 和12无变化
 
+14 和12无变化
+
+14
 
 坑：
 org.gradle.api.artifacts.ProjectDependency.getConfiguration()Ljava/lang/String;
