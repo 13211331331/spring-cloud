@@ -5,7 +5,7 @@ version = '0.0.1-SNAPSHOT'
 
 dependencies {
     compile group: 'org.springframework.cloud', name: 'spring-cloud-netflix-core', version: '1.4.5.RELEASE'
-    compile group: 'org.springframework', name: 'spring-web', version: '5.0.9.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '4.3.6.RELEASE'
     compile project(':bean11')
 }
 

@@ -28,6 +28,7 @@ public interface IUserBiz {
 	//@RequestMapping(value = "/api/user/get/{id}", method = RequestMethod.GET)
 	//User get3(@PathVariable(value = "id") int id, @RequestParam String name);
 
+
 	@RequestMapping(value = "/api/user/get/{id}", method = RequestMethod.GET)
 	User get4(@PathVariable(value = "id") int id, @RequestParam Map<String, Object> name);
 
@@ -42,11 +43,12 @@ public interface IUserBiz {
 
 	@RequestMapping(value = "/api/user/{id}", method = RequestMethod.GET)
 	User view(@PathVariable(value = "id") int id);
-	
-	//@RequestMapping(value = "/api/user/{id}", method = RequestMethod.GET)
-	//String view1(@PathVariable(value = "id") int id);
-	
+
 	@RequestMapping(value = "/api/user/{id}", method = RequestMethod.GET)
 	Map<String, Object> view2(@PathVariable(value = "id") int id);
+
+
+    //@RequestMapping(value = "/api/user/{id}", method = RequestMethod.GET)
+    //String view1(@PathVariable(value = "id") int id);
 
 }

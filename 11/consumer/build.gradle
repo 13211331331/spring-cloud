@@ -19,7 +19,13 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-config')
     compile group: 'org.springframework.cloud', name: 'spring-cloud-netflix-core', version: '1.4.5.RELEASE'
     implementation('org.springframework.cloud:spring-cloud-starter-openfeign')
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure', version: '1.5.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot', version: '1.5.1.RELEASE'
     compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.6'
+
+
+
 }
 
 
