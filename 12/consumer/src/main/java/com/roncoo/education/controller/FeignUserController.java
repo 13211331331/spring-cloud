@@ -36,7 +36,7 @@ public class FeignUserController {
 		//map.put("name", "测试2");
 		//userBiz.get4(id, map);
 		//userBiz.get5(id, name);
-		System.out.println(roncooBiz.get("course/list.html"));
+		//System.out.println(roncooBiz.get("course/list.html"));
 		System.out.println(userBiz.find(id));
 		return userBiz.view1(id);
 	}
