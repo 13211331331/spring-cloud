@@ -41,7 +41,9 @@ https://blog.csdn.net/dengqiang123456/article/list/1?t=1
 
 20 服务网关-Zuul 的使用，在gateway工程，SpringBoot启动类添加@EnableZuulProxy
 
-22 服务网关-Zuul 如何对过滤器进行自定义，
+22 服务网关-Zuul 如何对过滤器进行自定义，CustomPreFilter extends ZuulFilter，@Bean public CustomPreFilter sessionPreFilter()
+
+23 ZuulFallbackProvider
 
 
 

@@ -1,7 +1,7 @@
 rootProject.name = 'spring-cloud'
 
 
-/*
+
 
 include '02:server', '02:provider', '02:consumer'
 
@@ -282,7 +282,7 @@ rootProject.children.find { it.name == '20/turbine' }.name = 'turbine20'
 include '20/gateway'
 rootProject.children.find { it.name == '20/gateway' }.name = 'gateway20'
 
-*/
+
 
 
 
@@ -307,7 +307,7 @@ rootProject.children.find { it.name == '22/turbine' }.name = 'turbine22'
 include '22/gateway'
 rootProject.children.find { it.name == '22/gateway' }.name = 'gateway22'
 
-/*
+
 
 
 include '23/api'
@@ -330,6 +330,6 @@ rootProject.children.find { it.name == '23/turbine' }.name = 'turbine23'
 
 include '23/gateway'
 rootProject.children.find { it.name == '23/gateway' }.name = 'gateway23'
-*/
+
 
 
