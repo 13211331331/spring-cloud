@@ -1,4 +1,4 @@
-
+https://blog.csdn.net/dengqiang123456/article/list/1?t=1
 
 2 简单的三个：eurekaServer、provider、consumer
 
@@ -37,7 +37,7 @@
 
 18 断路器-Hystrix Dashboard 的使用，fallback配到FeignClient,断路器的一些配置，在EurekaServer中加上@EnableHystrixDashboard，熔断监控Hystrix
 
-19 在consumer配置元数据eureka.instance.metadata-map.cluster，turbine断路器
+19 断路器-Turbine 的使用，在consumer配置元数据eureka.instance.metadata-map.cluster，turbine断路器
 
 
 
