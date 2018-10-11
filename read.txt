@@ -22,20 +22,20 @@
   方法中加入@RequestMapping(value  和Controller类似
   原来：RestTemplate方式调用远程服务
 
-11 将interface IUserBiz抽离出来到新的一个工程（api工程），将接口单独抽离出来，支持更多的接口
+11 声明式 REST 客户端-Feign 的各种调用，将interface IUserBiz抽离出来到新的一个工程（api工程），将接口单独抽离出来，支持更多的接口
 
-12 将UserService放到bean，consumer，provider同时使用这个service（consumer通过api）
+12 声明式 REST 客户端-Feign 的高级特性，将UserService放到bean，consumer，provider同时使用这个service（consumer通过api）
     在consumer feign开启压缩等配置,FeignClient启用RcFeignConfiguration
 
-13 和12无变化
+13 pring Cloud包管理：io.spring.platform
 
-14 在consumer @EnableCircuitBreaker  @HystrixCommand(fallbackMethod = "getFallback")
+14 断路器-Hystrix，在consumer @EnableCircuitBreaker  @HystrixCommand(fallbackMethod = "getFallback")
 
-16 在consumer @HystrixCommand(fallbackMethod = "getFallback", commandProperties = @HystrixProperty(name = HystrixPropertiesManager.EXECUTION_ISOLATION_STRATEGY, value = "SEMAPHORE"))
+16 断路器-Hystrix 的隔离策略，在consumer @HystrixCommand(fallbackMethod = "getFallback", commandProperties = @HystrixProperty(name = HystrixPropertiesManager.EXECUTION_ISOLATION_STRATEGY, value = "SEMAPHORE"))
 
-17 FeignClient的RcFeignConfiguration配置更加丰富，fallback配到FeignClient，自定义的fallback配置断路器（原来的是配到consumer的Controller层），consumer：feign里面配置hystrix
+17 断路器-Hystrix 对 Feign 的支持，FeignClient的RcFeignConfiguration配置更加丰富，fallback配到FeignClient，自定义的fallback配置断路器（原来的是配到consumer的Controller层），consumer：feign里面配置hystrix
 
-18 fallback配到FeignClient,断路器的一些配置，在EurekaServer中加上@EnableHystrixDashboard，熔断监控Hystrix
+18 断路器-Hystrix Dashboard 的使用，fallback配到FeignClient,断路器的一些配置，在EurekaServer中加上@EnableHystrixDashboard，熔断监控Hystrix
 
 19 在consumer配置元数据eureka.instance.metadata-map.cluster，turbine断路器
 
