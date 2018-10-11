@@ -6,7 +6,7 @@
 
 5 多个eurekaServer集群
 
-6.多个provider
+6.多个provider 通过RestTemplate来consumer调用provider
 
 8 provider provider provider2
  在consumer通过不同url选择
