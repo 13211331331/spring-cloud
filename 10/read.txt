@@ -1,0 +1,83 @@
+https://blog.csdn.net/dengqiang123456/article/details/75855526
+
+
+八、声明式 REST 客户端-Feign 的使用
+2017年07月23日 10:21:21 彦偈 阅读数：171 标签： spring-cloud  更多
+个人分类： Spring Cloud
+版权声明：本文为博主原创文章，未经博主允许不得转载。	https://blog.csdn.net/dengqiang123456/article/details/75855526
+一、 什么是 Feign？
+Feign 是一种声明式、模板化的 HTTP 客户端，在 Spring Cloud 中使用 Feign，可以做到使用 HTTP请求远程服务时能与调用本地方法一样的编码体验，开发者完全感知不到这是远程方法，更感知不到这是个 HTTP 请求。
+Feign 的灵感来源于 Retrofit、JAXRS-2.0 和 WebSocket，它使得 Java HTTP 客户端编写更方便，旨在通过最少的资源和代码来实现和 HTTP API 的连接。
+
+二、 引入 jar
+
+<dependency>
+ <groupId>org.springframework.cloud</groupId>
+ <artifactId>spring-cloud-starter-feign</artifactId>
+</dependency>
+1
+2
+3
+4
+说明：里面的 jar 包含有 spring-cloud-starter-Ribbon，是基于 Ribbon 来实现的
+
+三、 使用
+1、 加入注解
+
+@EnableFeignClients
+1
+说明：这个是开启 Feign 注解
+2、 添加 IuserBiz 接口类
+
+package com.comsys.biz;
+
+import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@FeignClient(value = "spring-cloud-provider")
+public interface IUserBiz {
+
+    @RequestMapping(value = "/api/user/{id}", method = RequestMethod.GET)
+    String view(@PathVariable(value = "id") int id);
+
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+3、方法请求
+
+package com.comsys.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.comsys.biz.IUserBiz;
+
+@RestController
+@RequestMapping(value = "/feign/user", method = RequestMethod.POST)
+public class FeignUserController {
+    @Autowired
+    private IUserBiz userBiz;
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public String get(@PathVariable(value = "id") int id) {
+        return userBiz.view(id);
+    }
+}

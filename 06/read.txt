@@ -1,0 +1,7 @@
+负载均衡-Ribbon
+https://blog.csdn.net/dengqiang123456/article/details/75809999
+
+
+七、 结论
+1、 Ribbon 通过@LoadBalanced 进行负载均衡。
+2、 默认的负载策略是轮询算法。

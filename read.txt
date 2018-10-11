@@ -6,17 +6,17 @@
 
 5 多个eurekaServer集群
 
-6.多个provider 通过RestTemplate来consumer调用provider
+6.启用Ribbon负载均衡，多个provider:Ribbon 通过@LoadBalanced 进行负载均衡,通过RestTemplate来consumer调用provider
 
-8 provider provider provider2
+8 负载均衡-Ribbon 的负载均衡策略,provider provider provider2
  在consumer通过不同url选择
     private static final String URL="http://spring-cloud-provider/api/user/{id}";
  	private static final String URL2="http://spring-cloud-provider2/api/user/{id}";
  	在provider找那中：spring.application.name=spring-cloud-provider   spring.application.name=spring-cloud-provider2
 
-9 在consumer 自定义策略 spring-cloud-provider.ribbon.NFLoadBalancerRuleClassName
+9 对负载均衡策略进行扩展,在consumer 自定义策略 spring-cloud-provider.ribbon.NFLoadBalancerRuleClassName
 
-10 在consumer ConsumerApplication中@EnableFeignClients
+10 声明式 REST 客户端-Feign 的使用,在consumer ConsumerApplication中@EnableFeignClients
   @FeignClient(value = "spring-cloud-provider")
   interface IUserBiz
   方法中加入@RequestMapping(value  和Controller类似
@@ -33,11 +33,11 @@
 
 16 在consumer @HystrixCommand(fallbackMethod = "getFallback", commandProperties = @HystrixProperty(name = HystrixPropertiesManager.EXECUTION_ISOLATION_STRATEGY, value = "SEMAPHORE"))
 
-17 FeignClient的RcFeignConfiguration配置更加丰富，fallback配到FeignClient，自定义的fallback配置断路器（原来的是配到consumer的Controller层）
+17 FeignClient的RcFeignConfiguration配置更加丰富，fallback配到FeignClient，自定义的fallback配置断路器（原来的是配到consumer的Controller层），consumer：feign里面配置hystrix
 
 18 fallback配到FeignClient,断路器的一些配置，在EurekaServer中加上@EnableHystrixDashboard，熔断监控Hystrix
 
-19
+19 在consumer配置元数据eureka.instance.metadata-map.cluster，turbine断路器
 
 
 
